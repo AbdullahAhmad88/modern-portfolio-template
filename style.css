@@ -146,3 +146,25 @@ footer {
 .hero-content {
   text-align: center;
 }
+/* BUTTON FIX */
+.btn-primary {
+  background: #ffffff;
+  color: #000000;
+  padding: 12px 26px;
+  border-radius: 8px;
+  text-decoration: none; /* removes underline */
+  font-weight: 600;
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #dddddd;
+  transform: translateY(-2px);
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
