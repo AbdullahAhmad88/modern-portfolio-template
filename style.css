@@ -143,3 +143,6 @@ footer {
   background: #ddd;
   transform: scale(1.05);
 }
+.hero-content {
+  text-align: center;
+}
