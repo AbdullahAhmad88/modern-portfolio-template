@@ -184,9 +184,11 @@ a {
 }
 .products-grid {
   display: flex;
-  gap: 20px;
   justify-content: center;
+  margin-top: 40px;
+  gap: 20px;
   flex-wrap: wrap;
+}
 }
 
 .product-card {
