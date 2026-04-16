@@ -72,12 +72,21 @@ h2 {
 }
 
 /* PRODUCTS GRID */
+#products {
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* THIS centers everything */
+}
+
 .products-grid {
   display: flex;
   justify-content: center;
+  align-items: center;   /* extra safety */
   gap: 25px;
   flex-wrap: wrap;
-  margin-top: 40px;
+  width: 100%;
+  max-width: 1000px;     /* keeps it centered */
+  margin: 40px auto 0;
 }
 
 /* PRODUCT CARD */
@@ -86,10 +95,11 @@ h2 {
   padding: 30px;
   border-radius: 16px;
   width: 300px;
+  margin: 0 auto; /* 🔥 forces center */
   border: 1px solid #222;
   transition: all 0.3s ease;
+  text-align: center;
 }
-
 .product-card:hover {
   transform: translateY(-8px);
   border-color: #444;
