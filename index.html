@@ -3,108 +3,80 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Your Name — Digital Products</title>
+
+  <!-- SEO (IMPORTANT FOR SELLING) -->
+  <title>Premium Digital Products & Templates | YourName</title>
+  <meta name="description" content="High-quality digital products, templates, and tools for creators. Available on Gumroad.">
+
   <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 </head>
-<body>
 
-  <!-- CURSOR -->
-  <div class="cursor" id="cursor"></div>
-  <div class="cursor-follower" id="cursorFollower"></div>
+<body>
 
   <!-- NAVBAR -->
   <nav class="navbar" id="navbar">
     <div class="nav-logo">YourName<span class="dot">.</span></div>
-    <div class="nav-right">
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#products" class="nav-link">Products</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
-      </ul>
-      <button class="menu-btn" id="menuBtn" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
+
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
   </nav>
 
   <!-- HERO -->
   <section class="hero" id="home">
-    <div class="hero-bg-orb orb1"></div>
-    <div class="hero-bg-orb orb2"></div>
-    <div class="hero-bg-orb orb3"></div>
-    <div class="noise"></div>
-
     <div class="hero-content">
-      <p class="hero-eyebrow fade-in-up" style="--delay:0.1s">✦ Available on Gumroad</p>
-      <h1 class="hero-title fade-in-up" style="--delay:0.25s">
-        Crafting Digital<br>
-        <span class="gradient-text">Products That</span><br>
-        People Love
-      </h1>
-      <p class="hero-sub fade-in-up" style="--delay:0.4s">
-        I design and sell premium digital products — templates, tools,<br class="br-hide"> and resources built for creators and entrepreneurs.
-      </p>
-      <div class="hero-btns fade-in-up" style="--delay:0.55s">
-        <a href="https://gumroad.com/yourprofile" target="_blank" class="btn-primary">
-          Shop on Gumroad <i class="fa-solid fa-arrow-right"></i>
-        </a>
-        <a href="#about" class="btn-ghost">Learn More</a>
-      </div>
-    </div>
+      <p class="hero-eyebrow">✦ Available on Gumroad</p>
 
-    <div class="hero-scroll-indicator fade-in-up" style="--delay:0.8s">
-      <span>Scroll</span>
-      <div class="scroll-line"></div>
+      <h1 class="hero-title">
+        Premium Digital Products<br>
+        <span class="gradient-text">That Save You Time</span>
+      </h1>
+
+      <p class="hero-sub">
+        High-quality templates, tools, and resources built for creators,
+        freelancers, and entrepreneurs.
+      </p>
+
+      <div class="hero-btns">
+        <a href="https://gumroad.com/yourprofile" target="_blank" class="btn-primary">
+          Shop Now <i class="fa-solid fa-arrow-right"></i>
+        </a>
+        <a href="#products" class="btn-ghost">View Products</a>
+      </div>
     </div>
   </section>
 
   <!-- ABOUT -->
   <section class="about section" id="about">
     <div class="container">
-      <div class="about-grid">
-        <div class="about-image-wrap reveal">
-          <div class="about-img-placeholder">
-            <!-- Replace with: <img src="your-photo.jpg" alt="Your Name" /> -->
-            <div class="img-mock">
-              <i class="fa-solid fa-user"></i>
-            </div>
-          </div>
-          <div class="about-badge">
-            <span class="badge-number">50+</span>
-            <span class="badge-label">Products Sold</span>
-          </div>
-        </div>
+      <h2 class="section-title">About Me</h2>
 
-        <div class="about-text reveal" style="--delay:0.15s">
-          <p class="section-label">✦ About Me</p>
-          <h2 class="section-title">The person behind the products</h2>
-          <p class="about-desc">
-            Hey! I'm <strong>Your Name</strong> — a digital creator passionate about building
-            high-quality resources that save you time and elevate your work.
-            I sell everything from design templates to productivity tools on Gumroad.
-          </p>
-          <p class="about-desc">
-            Every product I create is tested, refined, and made with a real use case in mind.
-            No fluff — just tools that actually help.
-          </p>
-          <div class="about-stats">
-            <div class="stat">
-              <span class="stat-num">50+</span>
-              <span class="stat-label">Happy Customers</span>
-            </div>
-            <div class="stat">
-              <span class="stat-num">10+</span>
-              <span class="stat-label">Products</span>
-            </div>
-            <div class="stat">
-              <span class="stat-num">5★</span>
-              <span class="stat-label">Avg Rating</span>
-            </div>
-          </div>
+      <p class="about-desc">
+        I'm <strong>Your Name</strong>, a digital creator focused on building
+        practical and high-quality products that help you launch faster and work smarter.
+      </p>
+
+      <div class="about-stats">
+        <div>
+          <h3>50+</h3>
+          <p>Customers</p>
+        </div>
+        <div>
+          <h3>10+</h3>
+          <p>Products</p>
+        </div>
+        <div>
+          <h3>5★</h3>
+          <p>Rating</p>
         </div>
       </div>
     </div>
@@ -113,82 +85,61 @@
   <!-- PRODUCTS -->
   <section class="products section" id="products">
     <div class="container">
-      <div class="section-header reveal">
-        <p class="section-label">✦ My Products</p>
-        <h2 class="section-title">What I'm selling</h2>
-        <p class="section-sub">Premium digital products crafted with care. Click any card to grab it on Gumroad.</p>
-      </div>
+
+      <h2 class="section-title">My Products</h2>
 
       <div class="products-grid">
 
-        <!-- PRODUCT CARD — duplicate and edit these -->
-        <a href="https://gumroad.com/l/your-product-link" target="_blank" class="product-card reveal" style="--delay:0s">
-          <div class="card-img">
-            <!-- Replace with: <img src="product1.jpg" alt="Product Name" /> -->
-            <div class="card-img-mock"><i class="fa-solid fa-layer-group"></i></div>
-          </div>
+        <!-- PRODUCT -->
+        <a href="https://gumroad.com/l/your-product-link" target="_blank" class="product-card">
           <div class="card-body">
             <span class="card-tag">Template</span>
-            <h3 class="card-title">Product Name One</h3>
-            <p class="card-desc">A short description of what this product does and who it's for. Keep it punchy.</p>
+            <h3>Modern Portfolio Template</h3>
+            <p>Clean, responsive portfolio template with premium design.</p>
+
             <div class="card-footer">
               <span class="card-price">$19</span>
-              <span class="card-cta">Get it <i class="fa-solid fa-arrow-right"></i></span>
+              <span>Buy Now →</span>
             </div>
           </div>
         </a>
 
-        <a href="https://gumroad.com/l/your-product-link" target="_blank" class="product-card reveal" style="--delay:0.1s">
-          <div class="card-img">
-            <div class="card-img-mock"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
-          </div>
+        <a href="#" class="product-card">
           <div class="card-body">
-            <span class="card-tag">Toolkit</span>
-            <h3 class="card-title">Product Name Two</h3>
-            <p class="card-desc">Another great product with a brief, compelling description. What problem does it solve?</p>
+            <span class="card-tag">UI Kit</span>
+            <h3>UI Design Kit</h3>
+            <p>Professional UI components for fast development.</p>
+
             <div class="card-footer">
               <span class="card-price">$29</span>
-              <span class="card-cta">Get it <i class="fa-solid fa-arrow-right"></i></span>
-            </div>
-          </div>
-        </a>
-
-        <a href="https://gumroad.com/l/your-product-link" target="_blank" class="product-card reveal" style="--delay:0.2s">
-          <div class="card-img">
-            <div class="card-img-mock"><i class="fa-solid fa-book-open"></i></div>
-          </div>
-          <div class="card-body">
-            <span class="card-tag">Guide</span>
-            <h3 class="card-title">Product Name Three</h3>
-            <p class="card-desc">A guide, ebook, or resource. Tell them exactly what they'll learn or get.</p>
-            <div class="card-footer">
-              <span class="card-price">$9</span>
-              <span class="card-cta">Get it <i class="fa-solid fa-arrow-right"></i></span>
-            </div>
-          </div>
-        </a>
-
-        <a href="https://gumroad.com/l/your-product-link" target="_blank" class="product-card reveal" style="--delay:0.3s">
-          <div class="card-img">
-            <div class="card-img-mock"><i class="fa-solid fa-palette"></i></div>
-          </div>
-          <div class="card-body">
-            <span class="card-tag">Design</span>
-            <h3 class="card-title">Product Name Four</h3>
-            <p class="card-desc">Your fourth product. Add as many cards as you need by copying this block.</p>
-            <div class="card-footer">
-              <span class="card-price">$39</span>
-              <span class="card-cta">Get it <i class="fa-solid fa-arrow-right"></i></span>
+              <span>Buy Now →</span>
             </div>
           </div>
         </a>
 
       </div>
 
-      <div class="products-cta reveal">
-        <a href="https://gumroad.com/yourprofile" target="_blank" class="btn-primary">
-          View All Products <i class="fa-solid fa-arrow-right"></i>
-        </a>
+    </div>
+  </section>
+
+  <!-- FAQ (ADDED → VERY IMPORTANT FOR SALES) -->
+  <section id="faq" class="section">
+    <div class="container">
+      <h2 class="section-title">FAQ</h2>
+
+      <div class="faq-item">
+        <h4>How do I use the template?</h4>
+        <p>Simply download, edit the content, and deploy.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>Do I need coding skills?</h4>
+        <p>Basic knowledge is helpful, but documentation is included.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>Can I use it commercially?</h4>
+        <p>Yes, you can use it for personal and client projects.</p>
       </div>
     </div>
   </section>
@@ -196,53 +147,24 @@
   <!-- CONTACT -->
   <section class="contact section" id="contact">
     <div class="container">
-      <div class="contact-wrap reveal">
-        <p class="section-label">✦ Get In Touch</p>
-        <h2 class="section-title">Let's talk</h2>
-        <p class="contact-sub">Have a question about a product? Want to collaborate? Drop me a message.</p>
 
-        <form class="contact-form" id="contactForm">
-          <div class="form-row">
-            <div class="form-group">
-              <label for="name">Name</label>
-              <input type="text" id="name" placeholder="Your name" required />
-            </div>
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" placeholder="your@email.com" required />
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" rows="5" placeholder="What's on your mind?" required></textarea>
-          </div>
-          <button type="submit" class="btn-primary form-submit">
-            Send Message <i class="fa-solid fa-paper-plane"></i>
-          </button>
-          <p class="form-note" id="formNote"></p>
-        </form>
+      <h2 class="section-title">Contact</h2>
 
-        <div class="contact-socials">
-          <a href="https://twitter.com/yourhandle" target="_blank" class="social-link"><i class="fa-brands fa-x-twitter"></i></a>
-          <a href="https://instagram.com/yourhandle" target="_blank" class="social-link"><i class="fa-brands fa-instagram"></i></a>
-          <a href="https://gumroad.com/yourprofile" target="_blank" class="social-link"><i class="fa-solid fa-store"></i></a>
-          <a href="mailto:your@email.com" class="social-link"><i class="fa-solid fa-envelope"></i></a>
-        </div>
-      </div>
+      <form class="contact-form">
+        <input type="text" placeholder="Your name" required />
+        <input type="email" placeholder="Email" required />
+        <textarea placeholder="Message"></textarea>
+
+        <button class="btn-primary">Send Message</button>
+      </form>
+
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer class="footer">
-    <div class="container footer-inner">
-      <span class="footer-logo">YourName<span class="dot">.</span></span>
-      <span class="footer-copy">© 2025 YourName. All rights reserved.</span>
-      <a href="https://gumroad.com/yourprofile" target="_blank" class="footer-gumroad">
-        <i class="fa-solid fa-store"></i> Gumroad Store
-      </a>
-    </div>
+    <p>© 2026 YourName. All rights reserved.</p>
   </footer>
 
-  <script src="script.js"></script>
 </body>
 </html>
