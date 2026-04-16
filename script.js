@@ -1,125 +1,209 @@
-// =============================================
-//  CUSTOM CURSOR
-// =============================================
-const cursor = document.getElementById('cursor');
-const follower = document.getElementById('cursorFollower');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-let mouseX = 0, mouseY = 0;
-let followerX = 0, followerY = 0;
+  <!-- SEO -->
+  <title>Premium Digital Products & Templates | YourName</title>
+  <meta name="description" content="High-quality digital products, templates, and tools for creators. Available on Gumroad.">
 
-document.addEventListener('mousemove', (e) => {
-  mouseX = e.clientX;
-  mouseY = e.clientY;
-  cursor.style.left = mouseX + 'px';
-  cursor.style.top = mouseY + 'px';
-});
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
 
-function animateFollower() {
-  followerX += (mouseX - followerX) * 0.12;
-  followerY += (mouseY - followerY) * 0.12;
-  follower.style.left = followerX + 'px';
-  follower.style.top = followerY + 'px';
-  requestAnimationFrame(animateFollower);
-}
-animateFollower();
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 
-// Scale cursor on hoverable elements
-document.querySelectorAll('a, button, .product-card').forEach(el => {
-  el.addEventListener('mouseenter', () => {
-    cursor.style.transform = 'translate(-50%, -50%) scale(1.8)';
-    cursor.style.background = 'var(--accent)';
-    follower.style.width = '52px';
-    follower.style.height = '52px';
-    follower.style.opacity = '0.25';
-  });
-  el.addEventListener('mouseleave', () => {
-    cursor.style.transform = 'translate(-50%, -50%) scale(1)';
-    cursor.style.background = 'var(--purple-light)';
-    follower.style.width = '36px';
-    follower.style.height = '36px';
-    follower.style.opacity = '0.5';
-  });
-});
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
 
-// =============================================
-//  NAVBAR — scroll + mobile menu
-// =============================================
-const navbar = document.getElementById('navbar');
-const menuBtn = document.getElementById('menuBtn');
-const navLinks = document.getElementById('navLinks');
+<body>
 
-window.addEventListener('scroll', () => {
-  navbar.classList.toggle('scrolled', window.scrollY > 50);
-});
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo">YourName<span class="dot">.</span></div>
 
-menuBtn.addEventListener('click', () => {
-  menuBtn.classList.toggle('open');
-  navLinks.classList.toggle('open');
-  document.body.style.overflow = navLinks.classList.contains('open') ? 'hidden' : '';
-});
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#testimonials">Reviews</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-// Close menu when a link is clicked
-navLinks.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => {
-    menuBtn.classList.remove('open');
-    navLinks.classList.remove('open');
-    document.body.style.overflow = '';
-  });
-});
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-content">
 
-// =============================================
-//  SCROLL REVEAL
-// =============================================
-const revealEls = document.querySelectorAll('.reveal');
+      <p class="hero-eyebrow">✦ Trusted by 50+ creators</p>
 
-const revealObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      revealObserver.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      <h1 class="hero-title">
+        Premium Digital Products<br>
+        <span class="gradient-text">That Save You Time</span>
+      </h1>
 
-revealEls.forEach(el => revealObserver.observe(el));
+      <p class="hero-sub">
+        Ready-to-use templates and tools designed to help you launch faster,
+        grow your brand, and save hours of work.
+      </p>
 
-// =============================================
-//  CONTACT FORM — fake submit handler
-//  Replace with Formspree, EmailJS, or similar
-// =============================================
-const form = document.getElementById('contactForm');
-const formNote = document.getElementById('formNote');
+      <div class="hero-btns">
+        <a href="https://gumroad.com/yourprofile" target="_blank" class="btn-primary">
+          Shop Now <i class="fa-solid fa-arrow-right"></i>
+        </a>
+        <a href="#products" class="btn-ghost">View Products</a>
+      </div>
 
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
+    </div>
+  </section>
 
-  const btn = form.querySelector('.form-submit');
-  btn.textContent = 'Sending…';
-  btn.disabled = true;
+  <!-- ABOUT -->
+  <section class="about section" id="about">
+    <div class="container">
 
-  // Simulate sending — replace this with real API call
-  setTimeout(() => {
-    btn.textContent = 'Sent!';
-    formNote.textContent = '✓ Message received! I\'ll get back to you soon.';
-    form.reset();
+      <h2 class="section-title">About Me</h2>
 
-    setTimeout(() => {
-      btn.innerHTML = 'Send Message <i class="fa-solid fa-paper-plane"></i>';
-      btn.disabled = false;
-      formNote.textContent = '';
-    }, 4000);
-  }, 1500);
-});
+      <p class="about-desc">
+        I'm <strong>Your Name</strong>, a digital creator focused on building
+        high-quality products that help you launch faster and work smarter.
+      </p>
 
-// =============================================
-//  SMOOTH SCROLL (fallback for older browsers)
-// =============================================
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', (e) => {
-    const target = document.querySelector(anchor.getAttribute('href'));
-    if (target) {
-      e.preventDefault();
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  });
-});
+      <div class="about-stats">
+        <div>
+          <h3>50+</h3>
+          <p>Customers</p>
+        </div>
+        <div>
+          <h3>10+</h3>
+          <p>Products</p>
+        </div>
+        <div>
+          <h3>5★</h3>
+          <p>Rating</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section class="products section" id="products">
+    <div class="container">
+
+      <h2 class="section-title">My Products</h2>
+
+      <div class="products-grid">
+
+        <a href="https://gumroad.com/l/your-product-link" target="_blank" class="product-card">
+          <div class="card-body">
+            <span class="card-tag">Template</span>
+            <h3>Modern Portfolio Template</h3>
+            <p>Clean, responsive, easy-to-edit portfolio template.</p>
+
+            <div class="card-footer">
+              <span class="card-price">$19</span>
+              <span>Buy Now →</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="#" class="product-card">
+          <div class="card-body">
+            <span class="card-tag">UI Kit</span>
+            <h3>UI Design Kit</h3>
+            <p>Professional UI components for faster development.</p>
+
+            <div class="card-footer">
+              <span class="card-price">$29</span>
+              <span>Buy Now →</span>
+            </div>
+          </div>
+        </a>
+
+      </div>
+
+      <!-- CTA -->
+      <div style="text-align:center; margin-top:40px;">
+        <a href="https://gumroad.com/yourprofile" target="_blank" class="btn-primary">
+          View All Products
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS (VERY IMPORTANT FOR SALES) -->
+  <section id="testimonials" class="section">
+    <div class="container">
+
+      <h2 class="section-title">What Customers Say</h2>
+
+      <div class="testimonials">
+        <div class="testimonial">
+          <p>"Super clean design and easy to use. Saved me hours!"</p>
+          <span>- Client</span>
+        </div>
+
+        <div class="testimonial">
+          <p>"Perfect for beginners. Setup was very simple."</p>
+          <span>- Buyer</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="section">
+    <div class="container">
+
+      <h2 class="section-title">FAQ</h2>
+
+      <div class="faq-item">
+        <h4>How do I use the template?</h4>
+        <p>Download, edit content, and deploy.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>Do I need coding skills?</h4>
+        <p>Basic knowledge helps, but it's beginner-friendly.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>Can I use it commercially?</h4>
+        <p>Yes, for personal and client projects.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact section" id="contact">
+    <div class="container">
+
+      <h2 class="section-title">Contact</h2>
+
+      <form class="contact-form" id="contactForm">
+        <input type="text" placeholder="Your name" required />
+        <input type="email" placeholder="Email" required />
+        <textarea placeholder="Message"></textarea>
+
+        <button class="btn-primary">Send Message</button>
+        <p id="formNote"></p>
+      </form>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2026 YourName. All rights reserved.</p>
+  </footer>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+
+</body>
+</html>
