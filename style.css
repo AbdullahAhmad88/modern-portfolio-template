@@ -168,3 +168,30 @@ a {
   text-decoration: none;
   color: inherit;
 }
+.products-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.product-card {
+  background: #111;
+  padding: 25px;
+  border-radius: 12px;
+  width: 280px;
+  text-align: center;
+  border: 1px solid #222;
+  transition: 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  border-color: #444;
+}
+
+.price {
+  font-size: 22px;
+  margin: 15px 0;
+  font-weight: bold;
+}
