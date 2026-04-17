@@ -17,11 +17,13 @@ body {
 .navbar {
   display: flex;
   justify-content: space-between;
-  padding: 20px 40px;
-  background: rgba(17,17,17,0.8);
+  align-items: center;
+  padding: 18px 40px;
+  background: rgba(17,17,17,0.85);
   backdrop-filter: blur(10px);
   position: sticky;
   top: 0;
+  z-index: 100;
 }
 
 .nav-logo {
@@ -38,7 +40,7 @@ body {
 .nav-links a {
   text-decoration: none;
   color: #ccc;
-  transition: 0.3s;
+  font-size: 14px;
 }
 
 .nav-links a:hover {
@@ -47,22 +49,26 @@ body {
 
 /* HERO */
 .hero {
-  padding: 120px 20px;
+  padding: 120px 20px 100px;
   text-align: center;
 }
 
 .hero h1 {
   font-size: 52px;
   font-family: 'Syne', sans-serif;
-  line-height: 1.2;
 }
 
 .hero p {
   margin-top: 15px;
   color: #aaa;
+  font-size: 16px;
 }
 
-/* GENERAL SECTIONS */
+.hero-btn {
+  margin-top: 25px;
+}
+
+/* GENERAL */
 section {
   padding: 80px 20px;
   text-align: center;
@@ -70,12 +76,10 @@ section {
 
 h2 {
   margin-bottom: 20px;
+  font-size: 28px;
 }
 
-/* ========================= */
-/* 🔥 PRODUCTS */
-/* ========================= */
-
+/* PRODUCTS */
 #products {
   display: flex;
   flex-direction: column;
@@ -91,8 +95,7 @@ h2 {
 .products-grid {
   display: flex;
   justify-content: center;
-  align-items: center;
-  gap: 30px;
+  gap: 25px;
   flex-wrap: wrap;
   max-width: 1000px;
   width: 100%;
@@ -105,20 +108,19 @@ h2 {
   border-radius: 16px;
   width: 300px;
   border: 1px solid #222;
-  transition: all 0.3s ease;
+  transition: 0.3s;
 
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
 }
 
 .product-card:hover {
   transform: translateY(-8px);
   border-color: #444;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
+/* TEXT */
 .product-card h3 {
   margin-bottom: 10px;
 }
@@ -130,7 +132,6 @@ h2 {
 
 /* BADGE */
 .badge {
-  display: inline-block;
   background: #fff;
   color: #000;
   font-size: 12px;
@@ -145,7 +146,6 @@ h2 {
   margin: 15px 0;
   font-size: 14px;
   opacity: 0.8;
-  max-width: 220px;
   text-align: left;
 }
 
@@ -156,15 +156,13 @@ h2 {
 /* PRICE */
 .price {
   display: flex;
-  justify-content: center;
-  align-items: center;
   gap: 8px;
-  font-size: 26px;
+  align-items: center;
+  font-size: 24px;
   font-weight: bold;
   margin: 20px 0;
 }
 
-/* OLD PRICE */
 .old-price {
   text-decoration: line-through;
   opacity: 0.5;
@@ -180,45 +178,22 @@ h2 {
   font-weight: 600;
   display: inline-block;
   cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 8px 20px rgba(255,255,255,0.1);
-  margin-top: 10px;
+  transition: 0.3s;
+  margin-top: 12px;
 }
 
 .btn-primary:hover {
-  transform: translateY(-3px) scale(1.03);
-  box-shadow: 0 12px 30px rgba(255,255,255,0.25);
+  transform: translateY(-2px);
 }
 
-/* REMOVE LINK STYLE */
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-/* ========================= */
-/* 🚀 CTA */
-/* ========================= */
-
+/* CTA */
 .cta-section {
-  text-align: center;
   padding: 80px 20px;
-  background: linear-gradient(135deg, #111, #000);
-  border-top: 1px solid #222;
-}
-
-.cta-section h2 {
-  margin-bottom: 15px;
-  font-size: 32px;
 }
 
 .cta-section p {
-  margin-bottom: 35px;
+  margin-bottom: 25px;
   color: #aaa;
-}
-
-.cta-section .btn-primary {
-  margin-top: 10px;
 }
 
 /* FOOTER */
@@ -236,24 +211,20 @@ footer {
 @media (max-width: 768px) {
 
   .navbar {
-    flex-direction: column;
-    align-items: center;
     padding: 15px 20px;
   }
 
   .nav-links {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 10px;
+    display: none; /* keep simple for now */
   }
 
   .hero {
-    padding: 80px 20px;
+    padding: 80px 15px;
   }
 
   .hero h1 {
     font-size: 32px;
+    line-height: 1.3;
   }
 
   .hero p {
@@ -265,8 +236,8 @@ footer {
   }
 
   .product-card {
-    width: 90%;
-    max-width: 350px;
+    width: 100%;
+    max-width: 320px;
   }
 
   .btn-primary {
@@ -274,11 +245,4 @@ footer {
     text-align: center;
   }
 
-  .cta-section h2 {
-    font-size: 24px;
-  }
-
-  .cta-section p {
-    font-size: 14px;
-  }
 }
