@@ -176,3 +176,23 @@ footer {
   background: #111;
   color: #888;
 }
+/* WRAPPER (THIS FIXES CENTER ISSUE) */
+.products-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* GRID */
+.products-grid {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+/* PRODUCT CARD */
+.product-card {
+  width: 300px;
+  margin: 0 auto;
+}
