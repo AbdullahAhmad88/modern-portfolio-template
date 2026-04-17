@@ -196,3 +196,19 @@ footer {
   background: #111;
   color: #888;
 }
+/* ========================= */
+/* 🚀 CTA SECTION (FIX SPACING) */
+/* ========================= */
+
+.cta-section h2 {
+  margin-bottom: 15px;
+}
+
+.cta-section p {
+  margin-bottom: 30px; /* 🔥 THIS creates space */
+  color: #aaa;
+}
+
+.cta-section .btn-primary {
+  margin-top: 10px;
+}
