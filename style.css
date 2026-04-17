@@ -212,3 +212,21 @@ footer {
 .cta-section .btn-primary {
   margin-top: 10px;
 }
+/* OLD PRICE (DISCOUNT STYLE) */
+.old-price {
+  text-decoration: line-through;
+  opacity: 0.5;
+  margin-right: 8px;
+  font-size: 16px;
+}
+
+/* PRICE ROW FIX */
+.price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  font-size: 26px;
+  font-weight: bold;
+  margin: 20px 0;
+}
